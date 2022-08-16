@@ -193,4 +193,4 @@ document.getElementById("home").addEventListener("click", () => {
 // On load
 // Check for current theme and set it
 setOnload();
-// getNasaImages();
+getNasaImages();
