@@ -1,0 +1,33 @@
+@mixin reset() {
+  margin: 0;
+  padding: 0;
+}
+
+/*--------- Basic Reset ---------*/
+html,
+body,
+div,
+header,
+main,
+nav,
+article,
+aside,
+footer {
+  @include reset();
+}
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+a {
+  @include reset();
+}
+
+*,
+html,
+::before,
+::after {
+  box-sizing: border-box;
+}

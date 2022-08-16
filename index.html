@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA APOD</title>
+    <link
+      rel="shortcut icon"
+      type="image/svg+xml"
+      href="./images/favicon.svg"
+    />
+    <link rel="alternate icon" href="./favicon.ico" />
+    <!-- For Safari -->
+    <link rel=”mask-icon” href=”mask-icon.svg” color=”#000000">
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <!-- Loader -->
+    <div class="loader hidden">
+      <img src="./images/rings.svg" alt="Rings Loading Animation" width="70" />
+    </div>
+
+    <!-- Main Container -->
+    <div id="container">
+      <!-- Header -->
+      <header id="header">
+        <div class="header-wrapper">
+          <!-- NASA Logo -->
+          <div class="logo"><img src="./images/NasaPod_Logo.svg" alt="NASAPOD" width="160" height="60"></div>
+          <!-- Navigation -->
+          <nav class="navigation-cont">
+            <!-- Default Navigation -->
+            <div id="default-nav" class="navigation-items">
+              <h3 id="favorite-images" class="clickable">Favorites</h3>
+              <h3 class="clickable" onclick="getNasaImages()">Load More Images</h3>
+            </div>
+            <!-- Favorites Navigation-->
+            <div id="favorites-nav" class="navigation-items hidden">
+              <h3 id="home" class="clickable">Home</h3>
+              <h3 class="clickable" onclick="getNasaImages()">Load More Images</h3>
+            </div>
+          </nav>
+          <!-- Dark/light theme Toggle Button -->
+          <div class="dark-light-theme-wrapper">
+            <div>
+              <input type="checkbox" class="checkbox" id="theme-switch">
+              <label for="theme-switch" class="label">
+                <i class="bi bi-moon-fill"></i>
+                <i class="bi bi-brightness-low-fill"></i>
+                <div class='circle'>
+              </label>
+            </div>
+          </div>
+          <!-- Added to favorites confirmation -->
+          <div class="added-to-favorites hidden">
+            <h2>ADDED!</h2>
+          </div>
+        </div>
+      </header>
+
+      <!-- NASA Images Container -->
+      <main id="nasa-images-cont"></main>
+      
+    </div>
+  </body>
+</html>
